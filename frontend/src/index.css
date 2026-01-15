@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply bg-vscode-bg text-vscode-text font-mono;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-vscode-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-vscode-border rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-vscode-text-dim;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply px-4 py-2 bg-vscode-accent hover:bg-vscode-accent-hover text-white rounded transition-colors;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 bg-vscode-sidebar hover:bg-vscode-border text-vscode-text rounded transition-colors;
+}
+
+/* Panel styles */
+.panel {
+  @apply bg-vscode-panel border border-vscode-border rounded;
+}
+
+/* Result table styles */
+.result-table {
+  @apply w-full text-sm;
+}
+
+.result-table th {
+  @apply text-left px-3 py-2 bg-vscode-sidebar border-b border-vscode-border text-vscode-text-dim uppercase text-xs;
+}
+
+.result-table td {
+  @apply px-3 py-2 border-b border-vscode-border;
+}
+
+.result-table tr:hover td {
+  @apply bg-vscode-selection;
+}
+
+/* Code block styles */
+.code-block {
+  @apply bg-vscode-sidebar p-4 rounded font-mono text-sm overflow-x-auto;
+}
+
+/* Status indicators */
+.status-success {
+  @apply text-vscode-success;
+}
+
+.status-error {
+  @apply text-vscode-error;
+}
+
+.status-warning {
+  @apply text-vscode-warning;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2 py-1 rounded text-xs font-medium;
+}
+
+.badge-beginner {
+  @apply bg-green-900 text-green-200;
+}
+
+.badge-intermediate {
+  @apply bg-yellow-900 text-yellow-200;
+}
+
+.badge-advanced {
+  @apply bg-red-900 text-red-200;
+}
+
+.badge-expert {
+  @apply bg-purple-900 text-purple-200;
+}

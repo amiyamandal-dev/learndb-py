@@ -1,0 +1,29 @@
+[project]
+name = "learndb-py"
+version = "1.0.0"
+description = "LearnDB - An educational database implementation with interactive web UI"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "lark>=1.1.0",
+    "fastapi>=0.109.0",
+    "uvicorn[standard]>=0.27.0",
+    "pydantic>=2.5.0",
+    "python-multipart>=0.0.6",
+    "websockets>=12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+]
+
+[project.scripts]
+learndb-web = "backend.main:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["learndb", "backend"]
